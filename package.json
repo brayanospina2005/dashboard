@@ -10,8 +10,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.5",
+    "@fullcalendar/daygrid": "^6.1.11",
+    "@fullcalendar/list": "^6.1.11",
+    "@fullcalendar/timegrid": "^6.1.11",
+    "@mui/icons-material": "^5.15.17",
+    "@mui/material": "^5.15.17",
+    "@mui/x-data-grid": "^7.3.2",
+    "@nivo/bar": "^0.86.0",
+    "@nivo/core": "^0.86.0",
+    "@nivo/geo": "^0.86.0",
+    "@nivo/line": "^0.86.0",
+    "formik": "^2.4.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-pro-sidebar": "^1.1.0",
+    "react-router-dom": "^6.23.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
