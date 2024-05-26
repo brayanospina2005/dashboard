@@ -68,16 +68,18 @@ const CalendarPage = () => {
     }, []);
 
     return (
-        <Box m="20px">
+        <Box m="20px" height="calc(100vh - 40px)" overflow="hidden">
             <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
-            <Box display="flex" justifyContent="space-between">
+            <Box display="flex" justifyContent="space-between" height="100%" overflow="hidden" flexDirection={{ xs: 'column', md: 'row' }}>
                 {/* CALENDAR SIDEBAR */}
                 <Box
                     flex="1 1 20%"
                     backgroundColor={colors.primary[400]}
                     p="15px"
                     borderRadius="4px"
+                    mb={{ xs: '20px', md: '0' }}
+                    overflow="auto"
                 >
                     <Typography variant="h5">Events</Typography>
                     <List>
@@ -108,8 +110,15 @@ const CalendarPage = () => {
                 </Box>
 
                 {/* CALENDAR */}
-                <Box flex="1 1 100%" ml="15px">
-                    <div id="calendar"></div>
+                <Box flex="1 1 75%" ml={{ xs: '0', md: '15px' }} sx={{
+                    maxWidth: '100%',
+                    height: '100%',
+                    overflow: 'auto',
+                    '& #calendar': {
+                        height: '100%',
+                    },
+                }}>
+                    <div id="calendar" style={{ minHeight: '400px', height: '90%' }}></div>
                 </Box>
             </Box>
         </Box>
